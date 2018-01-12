@@ -11,7 +11,7 @@ If you don't have an extensive knowledge about ArmA3 mission building, do read t
 
 ## The Boneback of a Mission
 
-First things first, let's explain what a mission is: a mission is a folder which contains a **.sqm** file. That's it, really. It also contains additional others file but that we won't consider just yet. 
+First things first, let's explain what a mission is: a mission is a folder which contains a **.sqm** file. That's it, really. It also contains additional others file but that we won't consider just yet.
 
 ### The Folder
 
@@ -32,13 +32,13 @@ Defence_Of_Hong_Kong.FoW_map_henderson <--- NOT OK, wrong map name (case sensiti
 
 ### The .SQM
 
-An **.sqm** file is simply a relatively long and boring list of objects you decide to place down in a given scenario (or map): it's a direct product of the in-game editor **3DEN**. Each object you had to a map is added to this *list* and some properties are described, like: position, orientation, health, cargo, relationships with other objects and so on. 
+An **.sqm** file is simply a relatively long and boring list of objects you decide to place down in a given scenario (or map): it's a direct product of the in-game editor **3DEN**. Each object you had to a map is added to this *list* and some properties are described, like: position, orientation, health, cargo, relationships with other objects and so on.
 
 Generally speaking, you want to keep the hell away from this file, it's generated from the game and should be touched only through the game, that is by modifying the mission using the editor.
 
 ### Not simply a static business
-It is worth nothing that **.sqm** not only stores information objects, markers, units as static elements, but it also provides the user with the ability of defining scripts that can be executed during the mission. 
-This is usually done in two different ways: 
+It is worth nothing that **.sqm** not only stores information objects, markers, units as static elements, but it also provides the user with the ability of defining scripts that can be executed during the mission.
+This is usually done in two different ways:
 * Using the **init** of an object;
 * Using triggers.
 
@@ -61,7 +61,7 @@ This is done by using triggers, they are **active listeners**: they can be posit
 * when it goes from *true* to *false*, the user **deactivates**;
 * when it stays the same, **nothing happens**.
 
-By placing code in the **onAct** and **onDeact** fields, we can run script whenever our conditions are met, or not met anymore, *how cool is that*? 
+By placing code in the **onAct** and **onDeact** fields, we can run script whenever our conditions are met, or not met anymore, *how cool is that*?
 
 Learning how to efficiently program with these, will be for another time, I'm afraid.
 
@@ -110,11 +110,11 @@ Fear not:
 After the *description.ext* we are left with 5 others **.sqf** files, which, as I said above, contain raw code. It should be noted at this point that the game might create some of them by default, but the user can create them out of thin air just creating a new file and using the **exact names and extensions**.
 
 ### But first, about locality...
-I'm sure most of those who are reading have no idea what **locality** is, but in a nutshell, it means that there are more than one machine running the game in multiplayer environment. 
+I'm sure most of those who are reading have no idea what **locality** is, but in a nutshell, it means that there are more than one machine running the game in multiplayer environment.
 
 This has some very serious implications.
 
-There are generally three types of code: 
+There are generally three types of code:
 * **globally** executed, run on every machine connected to the server, server included.;
 * **server** executed, server machine will run the code and no one else;
 * **locally** executed, only the machine on which the code is executed will run the code.
@@ -155,13 +155,13 @@ In the **loadouts** folder several *.sqf* are present, one for each predefined g
 
 The file *whitelist.h* contains a config (or a list) of **UIDs** that are inside specific classes, nothing should be changed but only this part:
 ```
-members[] = { ... } 
+members[] = { ... }
 ```
 
 Remember to add a comment next to the **UID** to remember whose it is.
 
-## Creating the mission	
-When creating your mission you should be careful because our codes rely on some variables that need to be present:
+## Creating the mission
+When creating your mission you should be careful because our codes rely on some variablesNames that need to be present:
 * UNITS:
 	* **HQ**, the unit that the leader will control;
 	* **zeus1**, **zeus2**, they are the two Mission Makers.
@@ -170,9 +170,15 @@ When creating your mission you should be careful because our codes rely on some 
 	* **airfield**, it's where the pilots will respawn;
 	* **air_spawn**, it's where spawned planes will fly in from.
 
+Along with these variableNames, you should also place down important assets, such as:
+* Virtual Arsenal, it can be anything you want and must have this in the init: ``[this, false] spawn rmn_fnc_arsenalRestriction;``
+* Donators Virtual Arsenal, any item you want. Init: ``[this, true] spawn rmn_fnc_arsenalRestriction;``
+* Loadouts Box. Init: ``[this] spawn rmn_fnc_loadouts;``
+* Radio Air-Spawn: should be a radio next to the pilots' spawn, init: ``[this] spawn rmn_fnc_makeAirSpawn;``
+
 ## How to assemble the mission
 You should be cloning this repository so that you have a working copy on your computer at all times and keep it in sync when working on your missions.
 
-When you have finished working on your mission and have a **.sqm** ready, simply copy paste all the contents from your local working copy of this repository to your mission folder. 
+When you have finished working on your mission and have a **.sqm** ready, simply copy paste all the contents from your local working copy of this repository to your mission folder.
 
 Compile your folder into a **.pbo**, play it.
