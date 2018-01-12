@@ -2,8 +2,6 @@
 
 { _x addCuratorEditableObjects [[player], true];} foreach allCurators;
 
-player setUnitLoadout [player getVariable ["Saved_Loadout", []], true];
-
 [player, [missionNamespace, "inventory_var"]] call BIS_fnc_loadInventory;
 
 (_this select 1) spawn {
@@ -21,14 +19,27 @@ if (typeOf player == "LIB_USA_NCO_PilotM41VmPm1LtColt") exitWith {
   player setPos (getMarkerPos "airfield");
 };
 
-
-if (!isNil "HQ") then {
-  if (alive HQ) then {
-    player setPos (getPos HQ);
+if ((leader (group player)) != player) then {
+  if (alive (leader (group player))) then {
+    player setPos (getPosWorld (leader (group player)));
+  } else {
+    if (!isNil "HQ") then {
+      if (alive HQ) then {
+        player setPos (getPosWorld HQ);
+      } else {
+        player setPos (getMarkerPos "respawn_guerrila");
+      };
+    } else {
+      player setPos (getMarkerPos "respawn_guerrila");
+    };
   };
 } else {
-  if (alive leader group player) then {
-    player setPos (getPos (leader group player));
+  if (!isNil "HQ") then {
+    if (alive HQ) then {
+      player setPos (getPosWorld HQ);
+    } else {
+      player setPos (getMarkerPos "respawn_guerrila");
+    };
   } else {
     player setPos (getMarkerPos "respawn_guerrila");
   };

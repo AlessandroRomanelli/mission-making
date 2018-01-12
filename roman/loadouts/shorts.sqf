@@ -8,3 +8,5 @@ _newU_Items set [0, _newUniform];
 _newLoadout = _currentLoadout;
 _newLoadout set [3, _newU_items];
 player setUnitLoadout [_newLoadout, true];
+
+

@@ -31,4 +31,4 @@ player linkItem "ItemCompass";
 player linkItem "ItemWatch";
 player linkItem "N_LIB_GER_Cap_Earphone";
 
-player setVariable ["Saved_Loadout", getUnitLoadout player];
+

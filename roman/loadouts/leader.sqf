@@ -55,4 +55,4 @@ player assignItem "itemCompass";
 player assignItem "itemWatch";
 player assignItem "itemMap";
 
-player setVariable ["Saved_Loadout", getUnitLoadout player];
+

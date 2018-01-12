@@ -30,4 +30,3 @@ player linkItem "ItemMap";
 player linkItem "ItemCompass";
 player linkItem "ItemWatch";
 
-player setVariable ["Saved_Loadout", getUnitLoadout player];
