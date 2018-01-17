@@ -21,11 +21,11 @@ if (typeOf player == "LIB_USA_NCO_PilotM41VmPm1LtColt") exitWith {
 
 if ((leader (group player)) != player) then {
   if (alive (leader (group player))) then {
-    player setPos (getPosWorld (leader (group player)));
+    [(leader (group player))] spawn rmn_fnc_teleport;
   } else {
     if (!isNil "HQ") then {
       if (alive HQ) then {
-        player setPos (getPosWorld HQ);
+        [HQ] spawn rmn_fnc_teleport;
       } else {
         player setPos (getMarkerPos "respawn_guerrila");
       };
@@ -36,7 +36,7 @@ if ((leader (group player)) != player) then {
 } else {
   if (!isNil "HQ") then {
     if (alive HQ) then {
-      player setPos (getPosWorld HQ);
+      [HQ] spawn rmn_fnc_teleport;
     } else {
       player setPos (getMarkerPos "respawn_guerrila");
     };
