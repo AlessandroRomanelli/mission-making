@@ -16,14 +16,15 @@ for "_i" from 1 to 10 do {player addItemToUniform "ACE_fieldDressing";};
 for "_i" from 1 to 5 do {player addItemToUniform "10Rnd_303_Magazine";};
 player addItemToUniform "US_Facepaint";
 player addItemToUniform "murshun_cigs_cigpack";
-player addVest "fow_v_uk_bren";
+player addVest "fow_v_uk_base";
 player addItemToVest "fow_e_no36mk1";
 for "_i" from 1 to 2 do {player addItemToVest "fow_e_no77";};
-for "_i" from 1 to 5 do {player addItemToVest "10Rnd_303_Magazine";};
+for "_i" from 1 to 10 do {player addItemToVest "10Rnd_303_Magazine";};
 for "_i" from 1 to 2 do {player addItemToVest "ACE_CableTie";};
+player addBackpack "fow_b_uk_p37";
 player addItemToVest "ACE_EntrenchingTool";
 player addItemToVest "murshun_cigs_matches";
-player addBackpack "fow_b_uk_vickers_support";
+player addWeapon "LIB_M2_Tripod";
 player addHeadgear "fow_h_uk_woolen_hat";
 player addWeapon "bnae_mk1_virtual";
 player selectWeapon "bnae_mk1_virtual";
@@ -35,5 +36,3 @@ player addItem "itemMap";
 player assignItem "itemCompass";
 player assignItem "itemWatch";
 player assignItem "itemMap";
-
-

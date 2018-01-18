@@ -15,5 +15,6 @@ class rmn {
 		class teleport {};
 		class enableParadrop {};
 		class spawnParadrop {};
+		class initCountdown {};
 	};
 };

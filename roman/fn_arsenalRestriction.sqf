@@ -4,9 +4,7 @@ _availableWeapons =   [
                         "LEN_StenMk2S",
                         "LIB_M2_Flamethrower",
                         "LIB_M1928A1_Thompson",
-                        "bnae_mk1_virtual",
-                        "LIB_M1919A6",
-                        "LIB_M2_Tripod"
+                        "bnae_mk1_virtual"
                       ];
 _availableItems =     [ "fow_h_uk_mk2",
                         "fow_h_uk_mk2_net",

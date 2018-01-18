@@ -60,19 +60,21 @@ _goldItems      =     [ "fow_g_glasses1",
                         "G_LIB_Headwrap",
                         "G_LIB_Headwrap_gloves",
                         "LIB_GER_Headset",
-                        "G_LIB_Binoculars"];
+                        "G_LIB_Binoculars",
+                        "immersion_cigs_cigar0",
+                        "FF_Pijp"];
 
 _goldBackpacks      = [ "fow_b_uk_bergenpack",
 		                    "fow_b_uk_bergenpack_desert",
                         "fow_b_uk_p37_shovel",
                         "fow_b_uk_p37_blanco_shovel"];
 
-_bronzeWeapons =      ["fow_w_webley"];
-_bronzeMags    =      ["fow_6Rnd_455"];
-_silverWeapons =      ["LIB_M1928A1_Thompson", "LIB_M1928A1_Thompson", "fow_w_m1903A1", "fow_w_m1918a2"];
-_silverMags    =      ["LIB_30Rnd_45ACP", "LIB_50Rnd_45ACP", "fow_5Rnd_762x63", "fow_20Rnd_762x63"];
-_goldWeapons   =      ["fow_w_leeenfield_no5mk1_junglecarbine", "LEN_M3a1", "fow_w_m1918a2_bak"];
-_goldMags      =      ["fow_10Rnd_303", "LEN_30Rnd_45ACP_M3"];
+_bronzeWeapons =      ["fow_w_webley", "fow_w_m1903A1"];
+_bronzeMags    =      ["fow_6Rnd_455", "fow_5Rnd_762x63"];
+_silverWeapons =      ["LIB_M1928_Thompson", "fow_w_m1_carbine", "fow_w_m1918a2"];
+_silverMags    =      ["LIB_30Rnd_45ACP", "LIB_50Rnd_45ACP", "LIB_50Rnd_45ACP_t", "fow_15Rnd_762x33", "fow_20Rnd_762x63"];
+_goldWeapons   =      ["fow_w_leeenfield_no5mk1_junglecarbine", "LEN_M3a1", "fow_w_m1918a2_bak", "fow_w_welrod_mkii"];
+_goldMags      =      ["fow_10Rnd_303", "LEN_30Rnd_45ACP_M3", "fow_8Rnd_765x17"];
 
 [_arsenal, true, false] call BIS_fnc_removeVirtualBackpackCargo;
 [_arsenal, true, false] call BIS_fnc_removeVirtualItemCargo;

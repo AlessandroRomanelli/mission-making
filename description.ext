@@ -33,7 +33,10 @@ class CfgRemoteExec
   };
 };
 
-
 //viewdistance
 #include "taw_vd\GUI.h"
 #include "roman\whitelist.h"
+
+class RscTitles {
+    #include "roman\titles.h"
+};
