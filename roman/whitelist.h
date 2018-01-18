@@ -8,7 +8,12 @@ class Whitelist {
   };
 
   class Veterans {
-    members[]= {};
+    members[]= {
+      "76561198095498431", // Patrick
+      "76561198024773764", // Farage
+      "76561198042538328", // Anders
+      "76561198042731954" // Panj
+    };
   };
 
   class Donators {

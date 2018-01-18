@@ -17,6 +17,7 @@ _items =              [ "fow_h_uk_mk2",
 _backpacks =          [ "fow_b_uk_p37_radio",
                         "B_LIB_US_Type5",
 			                  "B_LIB_SOV_RA_Paradrop"];
+
 _mags =               [ "LIB_US_TNT_4pound_mag",
                         "LIB_Ladung_Big_MINE_mag",
                         "LIB_Ladung_Small_MINE_mag",
@@ -27,9 +28,16 @@ _mags =               [ "LIB_US_TNT_4pound_mag",
                   			"fow_1Rnd_piat_HE",
                   			"fow_1Rnd_piat_HEAT"];
 
+_veteransWeapons = ["CSA38_SMLE", "fow_w_sten_mk5", "fow_w_m1911"];
+
+_veteransMags = ["fow_32Rnd_9x19_sten", "fow_7Rnd_45acp"];
+
+_veteransBackpacks = ["fow_b_uk_p37_shovel"];
+
 _veteransItems =      [ "fow_v_uk_para_base",
-                        "fow_v_uk_para_bren",
-                        "fow_v_uk_para_sten"];
+                        "immersion_cigs_cigar0",
+                        "FF_Pijp",
+                        "fow_u_uk_parasmock"];
 
 _goldItems      =     [ "fow_g_glasses1",
                         "fow_g_glasses2",
@@ -60,9 +68,7 @@ _goldItems      =     [ "fow_g_glasses1",
                         "G_LIB_Headwrap",
                         "G_LIB_Headwrap_gloves",
                         "LIB_GER_Headset",
-                        "G_LIB_Binoculars",
-                        "immersion_cigs_cigar0",
-                        "FF_Pijp"];
+                        "G_LIB_Binoculars"];
 
 _goldBackpacks      = [ "fow_b_uk_bergenpack",
 		                    "fow_b_uk_bergenpack_desert",
@@ -89,8 +95,26 @@ _goldMags      =      ["fow_10Rnd_303", "LEN_30Rnd_45ACP_M3", "fow_8Rnd_765x17"]
   [_arsenal, true, false, true] call BIS_fnc_addVirtualMagazineCargo;
 } else {
   if ((getPlayerUID player) in veterans) then {
-    _weps     = _weps + _bronzeWeapons + _silverWeapons + _goldWeapons;
-    _mags     = _mags + _bronzeMags + _silverMags + _goldMags;
+    _weps     = _weps + _veteransWeapons;
+    _mags     = _mags + _veteransMags;
+    _items    = _items + _veteransItems;
+    _backpacks = _backpacks + _veteransBackpacks;
+    if ((getPlayerUID player) in bronze) then {
+        _weps = _weps + _bronzeWeapons;
+        _mags = _mags + _bronzeMags;
+    } else {
+      if ((getPlayerUID player) in silver) then {
+        _weps = _weps + _bronzeWeapons + _silverWeapons;
+        _mags = _mags + _bronzeMags + _silverMags;
+      } else {
+        if ((getPlayerUID player) in gold) then {
+            _weps = _weps + _bronzeWeapons + _silverWeapons + _goldWeapons;
+            _mags = _mags + _bronzeMags + _silverMags + _goldMags;
+            _items = _items + _goldItems;
+            _backpacks = _backpacks + _goldBackpacks;
+        };
+      };
+    };
   } else {
     if ((getPlayerUID player) in bronze) then {
         _weps = _weps + _bronzeWeapons;
@@ -105,7 +129,7 @@ _goldMags      =      ["fow_10Rnd_303", "LEN_30Rnd_45ACP_M3", "fow_8Rnd_765x17"]
             _mags = _mags + _bronzeMags + _silverMags + _goldMags;
             _items = _items + _goldItems;
             _backpacks = _backpacks + _goldBackpacks;
-        } else {};
+        };
       };
     };
   };
