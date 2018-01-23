@@ -23,6 +23,10 @@ if (_planeType isEqualto "LIB_C47_RAF") then {
 };
 
 player moveInDriver _plane;
+_plane addEventHandler ["Killed", {
+  _lives = player getVariable "airspawns";
+  player setVariable ["airspawns", _lives - 1];
+}];
 
 _plane setDir _dir;
 _plane setVelocity [sin _dir * _initialSpeed, cos _dir * _initialSpeed, 0];

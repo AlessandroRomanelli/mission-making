@@ -16,5 +16,8 @@ class rmn {
 		class enableParadrop {};
 		class spawnParadrop {};
 		class initCountdown {};
+		class initSkeetLauncher {};
+		class launchSkeet {};
+	 	class skeetProgram {};
 	};
 };

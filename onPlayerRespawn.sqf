@@ -15,7 +15,7 @@ if ((typeOf player) isEqualto "LIB_US_second_lieutenant") exitWith {
   player setPos (player getVariable ["last_position", getMarkerPos "respawn_guerrila"]);
 };
 
-if (typeOf player == "LIB_USA_NCO_PilotM41VmPm1LtColt") exitWith {
+if (typeOf player == "LIB_US_pilot") exitWith {
   player setPos (getMarkerPos "airfield");
 };
 
