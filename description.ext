@@ -22,15 +22,30 @@ class CfgFunctions
   #include "roman\CfgFunctions.hpp"
 };
 
-class CfgRemoteExec
+class cfgRemoteExec
 {
-  class Functions
-  {
-    mode = 2;
-    jip = 1;
-    class rmn_fnc_arsenalRestriction { allowedTargets = 0; };
-    class rmn_fnc_loadouts { allowedTargets = 0; };
-  };
+	class Functions
+	{
+		mode = 2;
+		jip = 1;
+	};
+	class Commands
+	{
+		mode = 2;
+		jip = 1;
+	};
+};
+
+class CfgDebriefing
+{
+	class End1
+	{
+		title = "Mission Completed";
+		subtitle = "The Commandos have saved the day once more!";
+		description = "";
+		pictureBackground = "loadscreen.jpg";
+		picture = "flag_UK";
+	};
 };
 
 //viewdistance
