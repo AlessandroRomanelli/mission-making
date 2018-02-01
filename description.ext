@@ -14,7 +14,7 @@ respawnOnStart = -1;
 enableDebugConsole = 1;
 
 respawn = 3;
-respawnDelay = 200;
+respawnDelay = 300;
 
 class CfgFunctions
 {

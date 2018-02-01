@@ -36,3 +36,6 @@ player addItem "itemMap";
 player assignItem "itemCompass";
 player assignItem "itemWatch";
 player assignItem "itemMap";
+
+[player, [missionNamespace, "inventory_var"]] call BIS_fnc_saveInventory;
+player setVariable ["currentWeapon", [] call bis_fnc_saveInventory select 6 select 0];

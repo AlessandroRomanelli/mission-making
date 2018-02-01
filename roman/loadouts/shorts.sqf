@@ -9,4 +9,4 @@ _newLoadout = _currentLoadout;
 _newLoadout set [3, _newU_items];
 player setUnitLoadout [_newLoadout, true];
 
-
+[player, [missionNamespace, "inventory_var"]] call BIS_fnc_saveInventory;

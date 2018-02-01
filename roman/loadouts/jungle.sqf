@@ -18,6 +18,7 @@ _newUniform = _initials call {
     case "ssg": {"fow_u_uk_bd40_seac_01_sergeant"};
     case "2lt": {"fow_u_uk_bd40_seac_01_lieutenant"};
     case "lt.": {"fow_u_uk_bd40_seac_01_lieutenant"};
+    case "sma": {"fow_u_uk_bd40_seac_01_lieutenant"};
     case "cpt": {"fow_u_uk_bd40_seac_01_lieutenant"};
     default {"fow_u_uk_bd40_seac_01_private"};
     };
@@ -58,3 +59,5 @@ _newLoadout set [4, _newV_Items];
 _newLoadout set [5, _newB_Items];
 _newLoadout set [6, _newHeadgear];
 player setUnitLoadout [_newLoadout, true];
+
+[player, [missionNamespace, "inventory_var"]] call BIS_fnc_saveInventory;

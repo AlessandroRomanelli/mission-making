@@ -31,4 +31,5 @@ player linkItem "ItemCompass";
 player linkItem "ItemWatch";
 player linkItem "N_LIB_GER_Cap_Earphone";
 
-
+[player, [missionNamespace, "inventory_var"]] call BIS_fnc_saveInventory;
+player setVariable ["currentWeapon", [] call bis_fnc_saveInventory select 6 select 0];

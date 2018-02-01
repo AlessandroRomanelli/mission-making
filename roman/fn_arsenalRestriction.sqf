@@ -81,6 +81,12 @@ if (_isDonatorArsenal) then {
   _display displayAddEventHandler ["KeyDown", "if ((_this select 1) in [24,29]) then {true}"];
 }] call BIS_fnc_addScriptedEventHandler;
 
+[ missionNamespace, "arsenalClosed", {
+  if ((typeOf player) isEqualto "LIB_US_second_lieutenant") exitWith {};
+  [player, [missionNamespace, "inventory_var"]] call BIS_fnc_saveInventory;
+  player setVariable ["currentWeapon", [] call bis_fnc_saveInventory select 6 select 0];
+}] call BIS_fnc_addScriptedEventHandler;
+
 
 if (!_isDonatorArsenal) then {
   [_arsenal, _availableWeapons] call BIS_fnc_addVirtualWeaponCargo;
