@@ -15,7 +15,7 @@ for "_i" from 1 to 2 do {player addItemToUniform "ACE_EarPlugs";};
 for "_i" from 1 to 10 do {player addItemToUniform "ACE_fieldDressing";};
 player addItemToUniform "US_Facepaint";
 player addItemToUniform "murshun_cigs_cigpack";
-player addVest "fow_v_uk_sten";
+player addVest "fow_v_uk_bren";
 for "_i" from 1 to 2 do {player addItemToVest "fow_e_no36mk1";};
 for "_i" from 1 to 2 do {player addItemToVest "fow_e_no77";};
 for "_i" from 1 to 5 do {player addItemToVest "fow_30Rnd_303_bren";};

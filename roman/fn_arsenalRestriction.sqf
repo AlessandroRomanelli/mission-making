@@ -1,6 +1,7 @@
 params [["_arsenal", objNull], ["_isDonatorArsenal", false]];
 
 _availableWeapons =   [
+                        "LEN_StenMk2",
                         "LEN_StenMk2S",
                         "LIB_M2_Flamethrower",
                         "LIB_M1928A1_Thompson",
