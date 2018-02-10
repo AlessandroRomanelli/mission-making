@@ -1,6 +1,5 @@
 CHBN_adjustBrightness = 0.3;
 TF_speakerDistance = 25;
-player setVariable ["ACE_GForceCoef", 0];
 enableSentences false;
 enableRadio false;
 

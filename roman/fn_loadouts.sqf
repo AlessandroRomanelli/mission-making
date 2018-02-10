@@ -3,7 +3,9 @@ params ["_arsenal"];
   _arsenal allowdamage false;
 
   /* _arsenal addAction ["Switch to Civilian clothings", "roman\loadouts\civ.sqf"]; */
-  _arsenal addAction ["<t color='#ffffff'>Switch to Jungle Equipment</t>", "roman\loadouts\jungle.sqf"];
+  /* _arsenal addAction ["<t color='#ffffff'>Switch to Jungle Equipment</t>", "roman\loadouts\jungle.sqf"]; */
+  _arsenal addAction ["Equip a Electrical Kit", {player setVariable ["itemEquip", "electrical_kit"]; hint "You have equipped the Electrical Kit"}];
+  _arsenal addAction ["Equip a Crowbar", {player setVariable ["itemEquip", "crowbar"]; hint "You are now carrying a Crowbar"}];
   _arsenal addAction ["<t color='#ffffff'>==== NO.4 LOADOUTS ====</t>", ""];
   _arsenal addAction ["<t color='#fff000'>Recruit</t>", "roman\loadouts\recruit.sqf"];
   _arsenal addAction ["<t color='#fff000'>Rifleman</t>", "roman\loadouts\rifleman.sqf"];

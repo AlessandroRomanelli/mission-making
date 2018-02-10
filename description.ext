@@ -36,6 +36,25 @@ class cfgRemoteExec
 	};
 };
 
+class CfgSounds {
+  sounds[] = {};
+  class voltage {
+    name = "High Voltage";
+    sound[] = {"\roman\sounds\voltage.ogg", 1, 1, 10};
+    titles[] = {};
+  }
+  class shock {
+    name = "Electroshock";
+    sound[] = {"\roman\sounds\shock.ogg", 1, 1, 10};
+    titles[] = {};
+  }
+  class powerdown {
+    name = "Powerdown";
+    sound[] = {"\roman\sounds\powerdown.ogg", 1, 1, 10};
+    titles[] = {};
+  }
+};
+
 class CfgDebriefing
 {
 	class End1

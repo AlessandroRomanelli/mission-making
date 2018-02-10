@@ -19,5 +19,6 @@ class rmn {
 		class initSkeetLauncher {};
 		class launchSkeet {};
 	 	class skeetProgram {};
+	 	class makeRadar {};
 	};
 };
